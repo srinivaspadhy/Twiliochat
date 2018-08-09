@@ -1,0 +1,8 @@
+<p>
+  <button (click)='apicall()'>Call APIS</button>
+  <input type="text" placeholder="channelsearch" [(ngModel)]='u_name'/>
+  <button (click)='channelcall()'>Create Channel</button>
+  <input type="text" placeholder="type a message" [(ngModel)]='msg'/>
+  <button (click)='messagecall()'>Send Message</button>
+  {{data.body}}
+</p>
