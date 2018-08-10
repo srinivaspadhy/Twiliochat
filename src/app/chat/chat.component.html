@@ -1,10 +1,16 @@
 <div class="left">
-  <button (click)='apicall()'>Call APIS</button>
+  
   <div>
-    <input type="text" placeholder="channelsearch" [(ngModel)]='u_name' />
-  </div>
+    <input type="text" placeholder="Create a Channel" [(ngModel)]='u_name' />
+  </div><br/>
   <div>
     <button (click)='channelcall()'>Create Channel</button>
+  </div><br/>
+  <div>
+    <input type ="text" placeholder="Search a Channel" [(ngModel)]=ForSearch/>
+  </div>
+  <div>
+    <button (click)='allchannelcall(ForSearch)'>Search Chnnel</button>
   </div>
 </div><br/>
 <div class="right">

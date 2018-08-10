@@ -18,6 +18,7 @@ export class ChatComponent implements OnInit {
   userdata;
   setTime;
   message;
+  channeldata;
   ngOnInit() {
     this.userdata=localStorage.getItem('key');
       this.api.createuser(this.username);
@@ -55,6 +56,25 @@ export class ChatComponent implements OnInit {
       this.data = data;
     });
   }
+  length;
+  show:string;
+  allchannelcall(srcstr){
+    this.api.getallchannels().subscribe(res=>
+    {
+      this.length=res.channels.length;
+      for(let i=0;i<this.length;i++){
+        if(srcstr===res.channels[i].unique_name){
+          this.show=res.channels[i].unique_name;
+          break;
+        }
+        else{
+          this.show="channel not found";
+
+        }
+      }
+    }),
+    err => {console.log(err);}
+    }
   
 
 }

@@ -59,7 +59,10 @@ export class ApiobserveService {
     return this.http.post<any>(this.url + this.serviceId + "Users", body.toString(), this.httpOptions);
     
   }
-  
+  getallchannels():Observable<any>{
+    return this.http.get<any>(this.url+this.serviceId+"/Channels/",this.httpOptions);
+  }
+
   //adding a member to a channel through its SID or Uniquename
   //addmember(u_name):Observable<any>{
     //const body = new HttpParams().set('Identity', localStorage.getItem('usrkey')).set('ChannelSid', u_name).set('ServiceId','ISdca12eb9df2b4e4880a9c0c2be26059d');
