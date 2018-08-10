@@ -1,8 +1,25 @@
-<p>
+<div class="left">
   <button (click)='apicall()'>Call APIS</button>
-  <input type="text" placeholder="channelsearch" [(ngModel)]='u_name'/>
-  <button (click)='channelcall()'>Create Channel</button>
-  <input type="text" placeholder="type a message" [(ngModel)]='msg'/>
+  <div>
+    <input type="text" placeholder="channelsearch" [(ngModel)]='u_name' />
+  </div>
+  <div>
+    <button (click)='channelcall()'>Create Channel</button>
+  </div>
+</div><br/>
+<div class="right">
+  <div class="textarea">
+
+    
+    Listing Old Messages:
+    <ul>
+      <li *ngFor='let msg of message'>{{msg.body}}
+        from:{{msg.from}}
+      </li>
+    </ul>
+  
+  <input type="text" placeholder="type a message" [(ngModel)]='msg' />
   <button (click)='messagecall()'>Send Message</button>
-  {{data.body}}
-</p>
+  </div>
+  
+</div>

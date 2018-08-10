@@ -24,7 +24,8 @@ export class ChatareaComponent implements OnInit {
       (userData) => {
         console.log(socialPlatform + "sign in data:", userData);
         this.googleService.setData(userData);
-        this.router.navigate(["/chat"])
+        this.router.navigate(["/chat"]);
+        localStorage.setItem('key',userData.email);
       }
     )
   }

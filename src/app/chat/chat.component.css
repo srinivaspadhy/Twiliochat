@@ -1,0 +1,25 @@
+.left{
+    float: left;
+    width: 20%;
+    background-color: blue;
+    height:100vh;
+    padding:3%;
+    margin-bottom: 0;
+    font-size:15px;
+}
+
+.right{
+    float:right;
+    width:80%;
+    height:100vh;
+    background:ece5dd;
+    padding-left:30%;
+    overflow: scroll;
+}
+
+.textarea{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    left:30%;
+}
